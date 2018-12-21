@@ -21,4 +21,4 @@ after_success:
   - docker push addy071/multi-client
   - docker push addy071/multi-nginx
   - docker push addy071/multi-server
-- docker push addy071/multi-worker
+  - docker push addy071/multi-worker
