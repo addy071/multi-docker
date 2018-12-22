@@ -5,7 +5,8 @@
       "name": "client",
       "image": "addy071/multi-client",
       "hostname": "client",
-      "essential": false
+      "essential": false,
+      "memory": 128
     }
   ]
 
