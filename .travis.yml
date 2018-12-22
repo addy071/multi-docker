@@ -22,3 +22,16 @@ after_success:
   - docker push addy071/multi-nginx
   - docker push addy071/multi-server
   - docker push addy071/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  regions: eu-central
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-eu-central-1-306578827547
+  on:
+    branch: master
+  acces_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
+
